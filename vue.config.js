@@ -14,6 +14,12 @@ glob.sync('./src/pages/**/app.js').forEach(path => {
 })
 module.exports = {
   pages,
+  //publicPath: '/',
+  baseUrl: './',
+  // outputDir: 'dist',
+  outputDir: 'docs',
+  assetsDir: 'static',
+  lintOnSave: false,
   chainWebpack: config => config.plugins.delete('named-chunks'),
   devServer: {
     proxy: {
